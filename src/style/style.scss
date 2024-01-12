@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+$header-color: rgb(238, 238, 238);
+$text-black: rgb(0, 0, 0);
+$hover-link: rgb(254, 221, 0);
+.text-right {
+  text-align: right;
+}
+.text-left {
+  text-align: left;
+}
+body * {
+  font-family: Lato, "san-serif";
+  font-weight: 400;
+}
+#header {
+  background-color: $header-color;
+  position: relative;
+  border-bottom: 1px solid #bbb;
+  box-shadow: 0 -10px 25px #000;
+  padding: 10px 0;
+
+  .a-logo {
+    position: relative;
+    display: inline-block;
+    .logo-of-company {
+      max-width: 100%;
+      max-height: 50px;
+    }
+  }
+  .nav-holder {
+    height: 100%;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .navigation-holder {
+      margin: 0;
+
+      li {
+        display: inline-block;
+        text-decoration: none;
+        padding: 0 5px;
+
+        a {
+          text-decoration: none;
+          color: $text-black;
+          margin: 0;
+          padding: 0;
+          transition: 0.3s;
+
+          &.hover-link:hover {
+            color: $hover-link;
+          }
+        }
+      }
+    }
+  }
+}
+#content {
+  padding: 30px 0;
+  h1 {
+    font-weight: 900;
+  }
+  .holder-cars {
+    .holder-buttons {
+      margin-bottom: 30px;
+      span {
+        font-weight: 700;
+        padding: 0 10px;
+        transition: 0.3s;
+        border-radius: 5px;
+        border: 1px solid $hover-link;
+        display: inline-block;
+        margin-right: 10px;
+        &:hover {
+          cursor: pointer;
+          background-color: $hover-link;
+          border: 1px solid $text-black;
+        }
+      }
+    }
+    .holder-box-cars {
+      transition: 0.3s;
+      margin-bottom: 30px;
+      border-radius: 5px;
+      overflow: hidden;
+      outline: 1px solid transparent;
+      &:hover {
+        box-shadow: 0px 7px 22px -10px #000;
+        outline: 1px solid $hover-link;
+        .holder-car-info {
+          padding-left: 20px;
+        }
+      }
+      .holder-car-img {
+        img {
+          display: block;
+          width: 100%;
+          height: 200px;
+          margin-bottom: 5px;
+        }
+      }
+      .holder-car-info {
+        transition: 0.3s;
+
+        h5 {
+          color: $text-black;
+          font-weight: 700;
+          margin-bottom: 0;
+        }
+        p {
+          color: $text-black;
+          font-size: 14px;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  .info-team {
+    color: $text-black;
+    transition: 0.3s;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    overflow: hidden;
+
+    &:hover {
+      box-shadow: 0px 7px 22px -10px #000;
+    }
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    .holder-info {
+      padding: 20px 0 0 20px;
+      position: relative;
+      background: $hover-link;
+      // &::before {
+      //   position: absolute;
+      //   content: "";
+      //   background: $hover-link;
+      //   width: 40px;
+      //   height: 100%;
+      //   top: 0;
+      //   left: 0;
+      //   z-index: -1;
+      //}
+      h4 {
+        font-weight: 700;
+        margin-bottom: 0;
+      }
+      p {
+        margin-bottom: 0;
+      }
+      .email-team {
+        text-decoration: none;
+        margin-bottom: 10px;
+        display: inline-block;
+        transition: 0.3s;
+        color: $text-black;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+#footer {
+  background-color: $header-color;
+  position: relative;
+  border-bottom: 1px solid #bbb;
+  box-shadow: 0 10px 25px #000;
+  padding: 10px 0;
+  // position: absolute;
+  // width: 100%;
+  // height: auto;
+  // left: 0;
+  // bottom: 0;
+
+  .social-media {
+    text-align: right;
+    span {
+      &.facebook {
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+      a {
+        color: $text-black;
+        display: inline-block;
+        transition: 0.3s;
+
+        &:hover {
+          color: $hover-link;
+        }
+
+        i {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #header {
+    .holder-logo {
+      text-align: center;
+
+      .a-logo {
+        margin-bottom: 10px;
+      }
+    }
+    .nav-holder {
+      display: block;
+      text-align: center;
+    }
+  }
+  #content {
+    .holder-cars {
+      .holder-car-img {
+        img {
+          height: auto;
+        }
+      }
+    }
+  }
+  #footer {
+    .copyright {
+      text-align: center;
+      display: block;
+    }
+
+    .social-media {
+      text-align: center;
+    }
+  }
+}
